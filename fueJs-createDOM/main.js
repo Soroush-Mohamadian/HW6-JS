@@ -1,107 +1,132 @@
 FueJS.makeStyle(`
   
 @font-face {
-    fontFamily: 'Comfortaa',
-    src: 'url(Comfortaa-Regular)',
-    src: 'url(./Assets/Fonts/Comfortaa-Regular.ttf) format(truetype)',
-    fontWeight: 'normal',
+    font-family: Shabnam;
+    src: url('./Assets//Fonts/Shabnam.eot');
+    src: url('./Assets//Fonts/Shabnam.woff') format('woff'),
+         url('./Assets/Fonts/Shabnam.ttf') format('truetype');
+    font-weight: normal;
+}
+  
+@font-face {
+    font-family: Comfortaa;
+    src: url('Comfortaa-Regular');
+    src: url('./Assets/Fonts/Comfortaa-Regular.ttf') format('truetype');
+    font-weight: normal;
 }
 
 
 body{
-    display: 'flex',
-    flexDirection: 'row',
-    margin: '0',
+    display: flex;
+    flex-direction: row;
+    margin: 0;
 
+}
+
+#root{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 100vh;
 }
 
 
 
-@media screen and (min-width: 769px) { 
+@media screen and (min-width: 500px) { 
     
     body {
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'row-reverse',
-        margin: '0',
-        padding: '0',
+        height: 100vh;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0;
+        padding: 0;
     }
     
      /* RIGHT SIDE */    
     
      .rightPanel {
-        width: '48%',
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        marginTop: '0%',
-        alignItems: 'center',
-        fontFamily: 'Shabnam',
-        direction: 'rtl',
-        minWidth: '30%',
+        width: 48%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0%;
+        align-items: center;
+        font-family: 'Shabnam';
+        direction: rtl;
+        min-width: 30%;
     }
 
     .box {
         
-        width: '60%',
-        height: '70%',
-        padding: '20px',
+        width: 60%;
+        height: 70%;
+        padding: 20px;
     }
     .box div {
-        margin: '10px 0px',
+        margin: 10px 0px;
     }
     
     
     .text1 {
-        fontWeight: 'bold',
-        fontSize: '20px',
-        color: 'rgb(0, 136, 221)',
-        marginBottom: '80px !important',
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(0, 136, 221);
+        margin-bottom: 80px !important;
     }
     
     /* Input box */
     
     .input-box {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        color: 'rgb(194, 194, 194)',
+        display: flex;
+        justify-content: flex-end;
+        color: rgb(194, 194, 194);
     }
     input {
-        fontSize: '18px',
-        paddingBottom: '10px',
-        fontFamily: 'Shabnam',
-        border: 'transparent',
-        background: 'transparent',
-        borderBottom: '1px rgb(194, 194, 194) solid',
-       
+        font-size: 18px;
+        padding-bottom: 10px;
+        font-family: 'Shabnam';
+        border: transparent;
+        background: transparent;
+        border-bottom: 1px rgb(194, 194, 194) solid;
+        outline: none;
+        padding-right: .5vw;
+    }
+
+    #securityCode{
+        margin-left: 40%
+    }
+
+    #keyIcon{
+        padding-left: 11.5%
     }
     
     input::placeholder {
-        color: 'rgb(194, 194, 194)',
+        color: rgb(194, 194, 194);
     }
     
     
     
     .input {
-        margin: '1rem 0',
-        width: '100%',
+        margin: 1rem 0;
+        width: 100%;
     }
     .icon {
-        position: 'absolute',
-        alignSelf: 'center',
-        fontSize: '1.5rem !important',
+        position: absolute;
+        align-self: center;
+        font-size: 1.5rem !important;
     }
     
     .button {
-        boxShadow: '0 2px 2px 1px rgba(194, 194, 194, .8)',
-        width: '100%',
-        color: 'white',
-        fontSize: '20px',
-        fontFamily: 'Shabnam',
-        backgroundColor: '#0093ED',
-        borderColor: 'transparent',
-        borderRadius: '8px',
-        height: '60px',
+        box-shadow: 0 2px 2px 1px rgba(194, 194, 194, .8);
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-family: 'Shabnam';
+        background-color: #0093ED;
+        border-color: transparent;
+        border-radius: 8px;
+        height: 60px;
+        margin: 2vh 0vw;
     }
 
     .button:hover{
@@ -113,44 +138,44 @@ body{
     
     /* Left side */
     .animated {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 'inherit',
-        width: '52%',
-        background: 'rgb(40,187,238)',
-        background: 'linear-gradient(45deg, rgb(40, 159, 238) 10%, rgba(152,240,218,1) 86%)',
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        width:52%;
+        background: rgb(40,187,238);
+        background: linear-gradient(45deg, rgb(40, 159, 238) 10%, rgba(152,240,218,1) 86%);
     }
     
     /* Radar effect */
     .radar {
-        position: 'absolute',
-        height: 'inherit',
-        width: 'inherit',
-        overflow: 'hidden',
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        overflow: hidden;
     }
     
     .radar img {
-        position: 'relative',
-        height: 'inherit',
-        top: '50%',
-        left: '50%',
-        opacity: '.4',
-        transformOrigin: '0% 0%',
-        animation: 'clockwise 10s linear infinite ',
+        position: relative;
+        height: inherit;
+        top: 50%;
+        left: 50%;
+        opacity: .4;
+        transform-origin: 0% 0%;
+        animation: clockwise 10s linear infinite ;
     }
     
     .footer-message {
-        position: 'fixed',
-        alignSelf: 'flex-end',
-        justifySelf: 'center',
-        fontFamily: 'Comfortaa',
-        color: 'white',
+        position: fixed;
+        align-self: flex-end;
+        justify-self: center;
+        font-family: 'Comfortaa';
+        color: white;
     }
     
     @keyframes clockwise {
-        from { transform: 'rotate(0deg)     }',
-        to   { transform: 'rotate(360deg)    }',
+        from { transform: rotate(0deg);     }
+        to   { transform: rotate(360deg);    }
     }
     
     
@@ -163,115 +188,113 @@ body{
     
     @keyframes pulse {
         from {
-            transform: 'scale(0)',
-            opacity: '.2',
+            transform: scale(0);
+            opacity: .2;
         } to { 
-            transform: 'scale(1)',
-            opacity: '0',
+            transform: scale(1);
+            opacity: 0;
         }
     } 
     
     .ring1 {
-        position: 'absolute',
-        overflow: 'hidden',
-        width: 'inherit',
-        height: 'inherit',
-        backgroundColor: 'white',
-        borderRadius: '100%',
-        borderColor: 'transparent',
-        animation: 'pulse 7s linear infinite',
-        animationDelay: '.6s',
-        animationTimingFunction: 'ease',
+        position: absolute;
+        overflow: hidden;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: .6s;
+        animation-timing-function: ease;
         
     }
     
     .ring2 {
-        position: 'absolute',
-        width: 'inherit',
-        height: 'inherit',
-        backgroundColor: 'white',
-        borderRadius: '100%',
-        borderColor: 'transparent',
-        animation: 'pulse 7s linear infinite',
-        animationDelay: '1.2s',
-        animationTimingFunction: 'ease',
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 1.2s;
+        animation-timing-function: ease;
 
     }
     
     .ring3 {
-        position: 'absolute',
-        width: 'inherit',
-        height: 'inherit',
-        backgroundColor: 'white',
-        borderRadius: '100%',
-        borderColor: 'transparent',
-        animation: 'pulse 7s linear infinite',
-        animationDelay: '1.8s',
-        animationTimingFunction: 'ease',
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 1.8s;
+        animation-timing-function: ease;
     }
     
     .ring4 {
-        position: 'absolute',
-        width: 'inherit',
-        height: 'inherit',
-        backgroundColor: 'white',
-        borderRadius: '100%',
-        borderColor: 'transparent',
-        animation: 'pulse 7s linear infinite',
-        animationDelay: '2.4s',
-        animationTimingFunction: 'ease',
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 2.4s;
+        animation-timing-function: ease;
         
     }
 
     .ring5 {
-        position: 'absolute',
-        width: 'inherit',
-        height: 'inherit',
-        backgroundColor: 'white',
-        borderRadius: '100%',
-        borderColor: 'transparent',
-        animation: 'pulse 7s linear infinite',
-        animationDelay: '3s',
-        animationTimingFunction: 'ease',
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 3s;
+        animation-timing-function: ease;
         
     }
     
     .ring6 {
-        position: 'absolute',
-        width: 'inherit',
-        height: 'inherit',
-        backgroundColor: 'white',
-        borderRadius: '100%',
-        borderColor: 'transparent',
-        animation: 'pulse 7s linear infinite',
-        animationDelay: '3.6s',
-        animationTimingFunction: 'ease',
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 3.6s;
+        animation-timing-function: ease;
         
     }
         
     .ring7 {
-        position: 'absolute',
-        width: 'inherit',
-        height: 'inherit',
-        backgroundColor: 'white',
-        borderRadius: '100%',
-        borderColor: 'transparent',
-        animation: 'pulse 7s linear infinite',
-        animationDelay: '4.2s',
-        animationTimingFunction: 'ease',
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 4.2s;
+        animation-timing-function: ease;
         
     }
 
-    
-    
-   
+
 `)
 
 document.getElementById('root').append(
     FueJS.createElement("div",
         { className: 'rightPanel' },
         [
-            FueJS.createElement("div", {className:'box'},[
+            FueJS.createElement("div", { className: 'box' }, [
 
                 FueJS.createElement("div", { className: 'text1' }, [
                     FueJS.createElement("p", null, 'ورود')
@@ -290,7 +313,7 @@ document.getElementById('root').append(
                         color: '#9E9E9E',
                         marginTop: '-10px',
                     }
-                }, 'جهت ورود به برنامه نام کاربری و رمز عبور را وارد کنید به حساب کاربری'),
+                }, 'جهت ورود به برنامه نام کاربری و رمز عبور را وارد کنید'),
 
                 FueJS.createElement("div", { className: 'inputs' }, [
                     FueJS.createElement("div", { className: 'input-box' }, [
@@ -302,7 +325,7 @@ document.getElementById('root').append(
 
                         FueJS.createElement("i", { className: 'fa fa-user icon' })
                     ]),
-                    
+
                     FueJS.createElement("div", { className: 'input-box' }, [
                         FueJS.createElement("input", {
                             className: 'input',
@@ -316,44 +339,45 @@ document.getElementById('root').append(
 
                             className: 'input',
                             type: 'text',
-                            placeholder: 'رمز عبور',
+                            placeholder: 'کد امنیتی',
                             style: {
-                                width: '60%'
-                            }
+                                width: '60%',
+
+                            },
+                            id:'securityCode'
                         }),
-                        FueJS.createElement("i", { className: 'fa fa-lock icon' })
+                        FueJS.createElement("i", { className: 'fa fa-key icon',id:'keyIcon' })
                     ]),
                 ]), //inputs
-                FueJS.createElement("button",{className:'button'},'ورود'),
-                FueJS.createElement("div",{className:'label'},[
-                    FueJS.createElement("label",{style:'fontSize: 13px'},[
+                FueJS.createElement("button", { className: 'button' }, 'ورود'),
+                FueJS.createElement("div", { className: 'label' }, [
+                    FueJS.createElement("label", { style: { fontSize: '13px' } }, [
                         FueJS.createElement("input",
                             {
-                            type:'checkbox',
-                            style: 'display: inline' 
-                            },
-                            'مرا به خاطر بسپار')
-                    ]),
+                                type: 'checkbox',
+                                style: { display: 'inline' },
+                            }),
+                        'مرا به خاطر بسپار'])
                 ]), //label
 
             ]), //box
-    ]), // right panel
-    FueJS.createElement("div", {className:'animated'},[
-        FueJS.createElement("div", {className:'ring1'}),
-        FueJS.createElement("div", {className:'ring2'}),
-        FueJS.createElement("div", {className:'ring3'}),
-        FueJS.createElement("div", {className:'ring4'}),
-        FueJS.createElement("div", {className:'ring5'}),
-        FueJS.createElement("div", {className:'ring6'}),
-        FueJS.createElement("div", {className:'ring7'}),
-        FueJS.createElement("div", {className:'radar'},[
-            FueJS.createElement("img", {scr:'./Assets/PNG/radar-angle.png', alt:''} )
+        ]), // right panel
+    FueJS.createElement("div", { className: 'animated' }, [
+        FueJS.createElement("div", { className: 'ring1' }),
+        FueJS.createElement("div", { className: 'ring2' }),
+        FueJS.createElement("div", { className: 'ring3' }),
+        FueJS.createElement("div", { className: 'ring4' }),
+        FueJS.createElement("div", { className: 'ring5' }),
+        FueJS.createElement("div", { className: 'ring6' }),
+        FueJS.createElement("div", { className: 'ring7' }),
+        FueJS.createElement("div", { className: 'radar' }, [
+            FueJS.createElement("img", { src: './Assets/PNG/radar-angle.png', alt: 'radar' })
         ]),
-        FueJS.createElement("div", {className:'logo'},[
-            FueJS.createElement("img", {scr:'./Assets/PNG/Logo.png', alt:'Antivirus logo'} )
+        FueJS.createElement("div", { className: 'logo' }, [
+            FueJS.createElement("img", { src: './Assets/PNG/Logo.png', alt: 'Antivirus logo' })
         ]),
-        FueJS.createElement("div", {className:'footer-message'},[
-            FueJS.createElement("p",null, 'Multi Anti-Virus & Cybersecurities' )
+        FueJS.createElement("div", { className: 'footer-message' }, [
+            FueJS.createElement("p", null, 'Multi Anti-Virus & Cybersecurities')
         ]),
     ]) //animated
 
